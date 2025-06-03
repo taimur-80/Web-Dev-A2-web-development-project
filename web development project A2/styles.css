@@ -1,0 +1,343 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff; /* White text for better contrast */
+    background-color: #000; /* Black background */
+}
+
+header {
+    background-color: #000; /* Black header */
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #e10600; /* F1 red accent */
+}
+
+.logo {
+    height: 60px;
+    filter: brightness(0) invert(1); /* Makes logo white if it's black */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e10600; /* F1 red on hover */
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 3px solid #e10600;
+}
+
+/* Homepage Styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/track.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #e10600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news article {
+    background-color: #111;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid #e10600;
+    transition: transform 0.3s;
+}
+
+.news article:hover {
+    transform: translateY(-5px);
+}
+
+.news img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.news h3 {
+    color: #e10600;
+    margin-top: 1rem;
+}
+
+/* Drivers Page */
+.page-title {
+    color: #e10600;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.drivers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.driver-profile {
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.driver-profile:hover {
+    transform: translateY(-10px);
+}
+
+.driver-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.driver-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.driver-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.driver-profile img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 3px solid #e10600;
+}
+
+.driver-info {
+    padding: 1.5rem;
+}
+
+.driver-info p {
+    margin: 0.8rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #333;
+}
+
+.driver-info strong {
+    color: #e10600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .drivers-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .driver-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .driver-number {
+        font-size: 2rem;
+    }
+}
+
+/* Cars Page */
+.car-image {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(225, 6, 0, 0.3);
+}
+
+.specs {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 5px;
+    border-left: 4px solid #e10600;
+}
+
+.specs h2 {
+    color: #e10600;
+    margin-top: 0;
+}
+
+.specs ul {
+    padding-left: 1.5rem;
+}
+
+.specs li {
+    margin-bottom: 0.5rem;
+}
+
+/* Calendar Page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #111;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #e10600;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #222;
+}
+
+/* Contact Page */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #111;
+    border-radius: 5px;
+    border-left: 4px solid #e10600;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #e10600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #e10600;
+}
+
+button {
+    background-color: #e10600;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff1a1a;
+}
+
+.contact-info {
+    margin-top: 3rem;
+    text-align: center;
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.contact-info h2 {
+    color: #e10600;
+    margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 0.75rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .driver-profile {
+        padding: 1rem;
+    }
+}
